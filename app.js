@@ -2,7 +2,7 @@ var request = require("request");
 var express = require("express");
 var app = express.createServer();
 var fs = require("fs");
-var geonode = require("geonode");
+//var geonode = require("geonode");
 
 app.use(express.bodyParser());
 //app.use(express.logger({ format: ':method :url' }));
@@ -13,11 +13,11 @@ var camfile = fs.readFileSync("cameras.json");
 var cameras = JSON.parse(camfile);
 
 
-for(c in cameras){
+/*for(c in cameras){
     var cam = cameras[c];
     cam.point = new geonode.Geometry("POINT("+cam.geometry.coordinates[0]+" "+cam.geometry.coordinates[1]+")");
     cam.point.srid = 4326;
-}
+}*/
 
 /*var myPoint = new geonode.Geometry("POINT(10 30)");
 console.log(myPoint.toWkt()); // "POINT (1.0000000000000000 2.0000000000000000)"
