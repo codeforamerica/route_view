@@ -1,9 +1,10 @@
 {
-  "name": "esriproto",
+  "name": "routeview",
   "version": "0.0.1",
   "dependencies": {
     "express": ">=0.0.1",
-    "request": ">=0.0.1"
+    "request": ">=0.0.1",
+    "geonode": "git://github.com/dthompson/geonode"
   },
   "engines": {    
     "node": "0.6.x"
