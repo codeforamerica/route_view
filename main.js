@@ -36,8 +36,8 @@ $(function(){
                 cameraOrder =[];
                 for(c in cameras){
                     cam = cameras[c];
-                    cam.distance = Math.pow(result.routes[0].legs[0].start_location.lng() - cam.geometry[0], 2) 
-                        + Math.pow(result.routes[0].legs[0].start_location.lat() - cam.geometry[1], 2)
+                    cam.distance = Math.pow(result.routes[0].legs[0].start_location.lng() - cam.geometry.coordinates[0], 2) 
+                        + Math.pow(result.routes[0].legs[0].start_location.lat() - cam.geometry.coordinates[1], 2)
                     for(c in cameraOrder){
                         if(cameraOrder[c].distance > cam.distance){
                             cameraOrder.splice(c, 0,cam)
@@ -51,6 +51,7 @@ $(function(){
                     }
                 }
                 for(c in cameraOrder){
+                    console.log("cam dis", cameraOrder[c].distance);
                     $("#cameras").append("<img id='camera-"+c+
                                          "' src='/camera?url="+encodeURIComponent(cameraOrder[c].cameraImageURL)+"&time="+
                                          (+new Date())+"' />");
