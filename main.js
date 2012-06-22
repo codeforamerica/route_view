@@ -22,13 +22,13 @@ $(function(){
             travelMode: google.maps.TravelMode.DRIVING
         };
         directionsService.route(request, function(result, status) {
-            console.log(routeToGeoJSON(result.routes[0].overview_path));
+            //console.log(routeToGeoJSON(result.routes[0].overview_path));
 
             var polyg = bufferLine(routeToGeoJSON(result.routes[0].overview_path))
             drawPolygon(polyg);
 
             $.ajax("/cameras.json", {success:function(data){
-                console.log(data); 
+                //console.log(data); 
                 var cameras = filterCameras(data, polyg);
 
                 $("#cameras").empty();
