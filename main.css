@@ -14,7 +14,7 @@ header{
   background:#fff;
   border-bottom:solid 1px #999;
   padding:15px;
-  z-index:100;
+  z-index:1000;
   font-size:16px;
 }
 header input{ 
@@ -24,6 +24,11 @@ header input{
   margin:10px;
   margin-right:15px;
 }
+header.slim{ 
+  display:none;
+  
+}
+
 .btn{ 
   cursor:pointer;
   padding:5px 10px;
@@ -33,9 +38,17 @@ header input{
   color:#fff;
   display:inline;
 }
+.btn.selected{ 
+  background:#fff;
+  color:#0093d0;
+}
+
 .btn:hover{ 
   background:#00a3e0;
 }
+.btn.selected:hover{
+  background:#e8e8e8;
+} 
 #summary{ 
   display:none;
 }
@@ -60,4 +73,20 @@ div#menu{
   overflow:auto;
   background:#fff;
   border-left:solid 1px #999;
+}
+div#cameras{ 
+  width:325px;
+  margin:auto;
+}
+div.cameradesc{ 
+  float:left;
+  position:relative;
+  margin-top:-70px;
+  padding:15px;
+  color:#333;
+  background:rgba(255,255,255,0.9);
+  font-size:16px;
+}
+div#navbar{ 
+  display:none;
 }

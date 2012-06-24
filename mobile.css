@@ -3,26 +3,52 @@ div#getdirections{
 }
 header{ 
   height:120px;
+  display:none;
 }
 header input{ 
   width:80%;
   margin-bottom:10px;
 }
-div#map{ 
-  height:250px;
-  width:100%;
-  position:relative;
+header.slim{ 
+  height:25px;
+  position:absolute;
+  top:0px;
   left:0px;
-  top:135px;
   right:0px;
+  padding:7px;
+  display:block;
+  background:#000;
+  color:#fff;
+  font-size:12px;
+}
+header.slim .btn{ 
+float:right;
+}
+div#map{ 
+  width:100%;
+  position:absolute;
+  left:0px;
+  top:40px;
+  right:0px;
+  bottom:50px;
 }
 div#menu{
-  position:relative;
-  width:330px;
-  margin:auto;
-  padding:0px;
-  border-top:solid 1px #999;
+  position:absoute;
+  top:40px;
+  left:0px;
+  right:0px;
+  bottom:50px;
   border-left:none;
-  min-height:300px;
-  top:135px;
+  width:inherit;
+  display:none;
+}
+div#navbar{ 
+  display:block;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  height:40px;
+  background:#333;
+  padding-top:10px;
 }

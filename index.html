@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
     <title>Route View</title>
 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry,places&sensor=true"></script>
 
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="mobile.css" media="all and (max-width: 600px)" />
@@ -20,6 +22,12 @@
       <input type="text" id="end" value="1513 Halekoa, Honolulu, HI" />
       <div class="btn" id="getdirections">Get&nbsp;Directions</div>
     </header>
+    <header class="slim">
+      <div class="btn" id="change">Change</div>
+      <span class="from"></span> <br/> <span class="to"></span>
+
+    </header>
+    
     
     <div id="map"></div>
     
@@ -30,6 +38,10 @@
         <h3>Cameras along Route</h3>
       </div>
     </div>
-
+    <div id="navbar">
+      <div class="btn selected" id="mapbtn">Map</div>
+      <div class="btn" id="cambtn">Cameras</div>
+    </div>
+    
   </body>
 </html>
