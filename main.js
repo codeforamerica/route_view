@@ -48,7 +48,6 @@ $(function(){
         renderCamerasAlongRoute(directionsDisplay.directions)
     });
     $("#end").keypress(function(e){
-        console.log(e);
         if(e.keyCode == 13){
             $("#getdirections").click();
         }
@@ -313,7 +312,6 @@ function renderFavorites(){
     $("#nofavorites").show();
     for(r in routes){
         route = routes[r];
-        console.log("route: ",route);
         $("#nofavorites").hide();
         $("#routefavs ul").append("<li id='route-"+r+"' class='favroute'>"+
                                   "<span class='name'>"+route.name+"</span><br />"+
