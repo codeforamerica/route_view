@@ -18,9 +18,13 @@
   <body>
 
     <header>
-      <input type="text" id="start" value="650 South King St, Honolulu, HI" />
-      <input type="text" id="end" value="1513 Halekoa, Honolulu, HI" />
+      <img id="favorited" src="/star.png" />
+      <input type="text" id="start" value="" placeholder="Start Address" />
+      <input type="text" id="end" value="" placeholder="End Address"/>
+
       <div class="btn" id="getdirections">Get&nbsp;Directions</div>
+      <div class="btn" id="showfavs">Favorites</div>
+      <div class="examples">For example try: <a href="#" id="exampleroute">Downtown to Hawaii-Kai</a></div>
     </header>
     <header class="slim">
       <div class="btn" id="change">Change</div>
@@ -38,6 +42,33 @@
         <h3>Cameras along Route</h3>
       </div>
     </div>
+    <div id="container">
+      <div id="routefavs" class="dialog">
+        <div class="close">X</div>
+        <h2>Favorite Routes</h2>
+        <ul>
+          <li id="route-1" class="favroute">
+            <div class="remove">[X]</div>
+            <span class="name">Going Home</span><br />
+            <span class="start"></span> - <span class="end"></span>
+          </li>
+        </ul>
+        <div id="nofavorites">
+          You havent added any favorites yet. <br /><br />Add a route to your favorites by clicking on the star next to start address.
+        </div>
+        
+      </div>
+      <div id="nameroute" class="dialog">
+        <div class="close">X</div>
+        <h2>Name this route</h2>
+        <label>Name</label>
+        <input type="text" id="routename" />
+        <br />
+        <div class="btn" id="cancel">Cancel</div>
+        <div class="btn" id="saveRoute">Save</div>
+      </div>
+    </div>
+    
     <div id="navbar">
       <div class="btn selected" id="mapbtn">Map</div>
       <div class="btn" id="cambtn">Cameras</div>

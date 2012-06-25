@@ -58,7 +58,7 @@ header.slim{
 
 div#map{ 
   position:absolute;
-  top:70px;
+  top:80px;
   left:0px;
   bottom:0px;
   right:325px;
@@ -89,4 +89,91 @@ div.cameradesc{
 }
 div#navbar{ 
   display:none;
+}
+div#container{ 
+  display:none;
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background:rgba(255,255,255,0.3);
+  z-index:10000;
+}
+
+div.dialog{ 
+  width:300px;
+  margin:100px auto 0px auto;
+  border:solid 1px #eee;
+  background:#fff;
+  height:400px;
+  overflow:auto;
+  padding:15px;
+
+}
+
+div#nameroute{ 
+  display:none;
+}
+div#nameroute input{ 
+  width:250px;
+  padding:8px;
+  font-size:16px
+  margin:20px;
+  margin-bottom:30px;
+  
+}
+div#routefavs{ 
+  display:none;
+}
+
+div#routefavs ul{ 
+  margin:0px;
+  padding:0px;
+}
+div#routefavs ul li{ 
+  padding:5px;
+  margin:0px;
+  font-size:14px;
+  color:#666;
+  list-style:none;
+  cursor:pointer;
+  border-bottom:solid 1px #ccc
+}
+div#routefavs ul li:hover{
+  background:#eef8ee;
+} 
+div#routefavs ul li span.name{
+  font-size:18px;
+  color:#333;
+  font-weight:bold;
+}
+div#routefavs ul li div.remove{
+  float:right;
+  cursor:pointer;
+  
+}
+div.close{ 
+  float:right;
+  font-size:22px;
+  color:#666;
+  cursor:pointer;
+}
+img#favorited{ 
+  position:relative;
+  top:8px;
+  cursor:pointer;
+}
+
+div.examples{
+  margin:3px 0px 0px 35px;
+  color:#999;
+  font-style:italic;
+  font-size:12px;
+}
+div.examples a{ 
+  color:#666;
+}
+div.examples a:hover{
+  color:#444;
 }

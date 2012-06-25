@@ -6,7 +6,7 @@ header{
   display:none;
 }
 header input{ 
-  width:80%;
+  width:70%;
   margin-bottom:10px;
 }
 header.slim{ 
@@ -20,6 +20,20 @@ header.slim{
   background:#000;
   color:#fff;
   font-size:12px;
+}
+div.dialog{ 
+  position:absolute;
+  margin:0px;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  height:inherit;
+  width:inherit
+}
+header .btn{ 
+  font-size:12px;
+  padding:3px;
 }
 header.slim .btn{ 
 float:right;
@@ -51,4 +65,13 @@ div#navbar{
   height:40px;
   background:#333;
   padding-top:10px;
+}
+div.examples{ 
+  margin:0px;
+}
+input#end{ 
+  margin-left:35px;
+}
+#showfavs{ 
+  float:right;
 }
