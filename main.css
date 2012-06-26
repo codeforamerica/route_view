@@ -6,7 +6,7 @@ h3{
   color:#333;
 }
 header{ 
-  height:50px;
+  height:65px;
   position:absolute;
   top:0px;
   left:0px;
@@ -16,6 +16,7 @@ header{
   padding:15px;
   z-index:1000;
   font-size:16px;
+  min-width:1200px;
 }
 header input{ 
   width:250px;
@@ -37,6 +38,8 @@ header.slim{
   border: solid 1px #ccc;
   color:#fff;
   display:inline;
+  font-size:12px;
+  margin-right:10px;
 }
 .btn.selected{ 
   background:#fff;
@@ -49,16 +52,39 @@ header.slim{
 .btn.selected:hover{
   background:#e8e8e8;
 } 
+header .btn{
+  margin-top:-10px;
+}
+header.slim .btn{ 
+  margin-top:0px;
+}
+#logo_large{ 
+  display:block;
+}
+#logo_small{
+  display:none;
+} 
+
 #summary{ 
   display:none;
 }
 #directions{ 
-  display:none;
+  margin-left:20px;
+  margin-top:-20px;
+  padding:5px 20px 5px 20px;
+  border:solid 1px #ccc;
+  border-radius:5px;
+  background:#eee;
 }
-
+#getdirections{ 
+  float:right;
+}
+#showfavs{ 
+  float:right;
+}
 div#map{ 
   position:absolute;
-  top:80px;
+  top:95px;
   left:0px;
   bottom:0px;
   right:325px;
@@ -67,7 +93,7 @@ div#menu{
   width:325px;
   position:absolute;
   right:0px;
-  top:80px;
+  top:95px;
   z-index:105;
   bottom:0px;
   overflow:auto;
@@ -176,4 +202,14 @@ div.examples a{
 }
 div.examples a:hover{
   color:#444;
+}
+div#directions{ 
+  float:left;
+}
+div#logo{ 
+  float:left;
+}
+div#menu p{ 
+  text-align:center;
+  color:#666;
 }

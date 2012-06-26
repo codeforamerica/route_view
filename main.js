@@ -112,6 +112,7 @@ $(function(){
                           $("#end").val(),
                           $("#routename").val());
         renderFavorites();
+        $("#routename").val("");
         $("#container").hide();
         $("#routefavs").hide();
         $("#nameroute").hide();

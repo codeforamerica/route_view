@@ -2,7 +2,7 @@ div#getdirections{
   float:right;
 }
 header{ 
-  height:120px;
+  height:220px;
   display:none;
 }
 header input{ 
@@ -10,17 +10,24 @@ header input{
   margin-bottom:10px;
 }
 header.slim{ 
-  height:25px;
+  height:28px;
   position:absolute;
   top:0px;
   left:0px;
   right:0px;
   padding:7px;
   display:block;
-  background:#000;
+  background:#fff;
   color:#fff;
   font-size:12px;
 }
+#logo_large{ 
+  display:none;
+}
+#logo_small{
+  display:block;
+} 
+
 div.dialog{ 
   position:absolute;
   margin:0px;
@@ -30,6 +37,9 @@ div.dialog{
   bottom:0px;
   height:inherit;
   width:inherit
+}
+header{ 
+  min-width:inherit;
 }
 header .btn{ 
   font-size:12px;
@@ -62,12 +72,31 @@ div#navbar{
   bottom:0px;
   left:0px;
   right:0px;
-  height:40px;
+  height:30px;
   background:#333;
-  padding-top:10px;
+  padding-top:15px;
+}
+
+div#navbar .btn{ 
+
+  font-size:16px;
+  color:#fff;
+  border:none;
+  background:#222;
+  border-radius:0px;
+  padding:15px 40px;
+  margin-right:0px;
+  margin:auto;
+}
+div#navbar .btn.selected{ 
+  background:#555;
+}
+
+div#directions{ 
+  margin-top:20px;
 }
 div.examples{ 
-  margin:0px;
+  margin-bottom:20px;
 }
 input#end{ 
   margin-left:35px;
