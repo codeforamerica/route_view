@@ -22,7 +22,7 @@ header input{
   width:250px;
   padding:8px;
   font-size: 11px;
-  margin: 5px 0 0 0;
+  margin: 0 0 10px 0;
   height: 8px;
   border: 1px solid #333;
   display: inline;
@@ -38,9 +38,9 @@ header.slim{
 	line-height: 1em;
 	text-transform: uppercase;
 	width: 45px;
-	margin: 0 0 0 5px;
+	margin: 3px 0 0 6px;
 	padding-top: 4px;
-}
+	}
 
 .camerasheader {
 	background-color: #00B73B;
@@ -56,14 +56,9 @@ header.slim{
 }
 .btn{ 
   cursor:pointer;
-  padding:5px 10px;
-  border-radius:5px;
-  background:#0093d0;
-  border: solid 1px #ccc;
   color:#fff;
   display:inline;
-  font-size:12px;
-  margin-right:10px;
+  font-size: 12px;
 }
 .btn.selected{ 
   background:#fff;
@@ -71,10 +66,10 @@ header.slim{
 }
 
 .btn:hover{ 
-  background:#00a3e0;
+  background:#069314;
 }
 .btn.selected:hover{
-  background:#e8e8e8;
+  background:#069314;
 } 
 header .btn{
   margin-top:-10px;
@@ -98,10 +93,20 @@ header.slim .btn{
   height: 36px;
 }
 #getdirections{ 
-  float:right;
+  margin: 0 0 0 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 6px;
+  background: #40B418;
 }
 #showfavs{ 
-  float:right;
+  float: left;
+  position: absolute;
+  left: 149px;
+  top: 52px;
 }
 div#map{ 
   position:absolute;
@@ -118,7 +123,7 @@ div#menu{
   z-index:10001;
   bottom:0px;
   overflow:auto;
-  background:#eee;
+  background:#ddd;
 }
 div#cameras{ 
   width:325px;
@@ -166,8 +171,6 @@ div#nameroute input{
   width:250px;
   padding:8px;
   font-size:16px;
-  margin:20px;
-  margin-bottom:30px;
   
 }
 div#routefavs{ 
@@ -206,10 +209,13 @@ div.close{
   color:#666;
   cursor:pointer;
 }
-img#favorited{ 
-  position:relative;
-  top:8px;
+div#favorited{ 
+  float: left;
+  position: absolute;
+  left: 267px;
+  top: 52px;
   cursor:pointer;
+
 }
 
 div.examples{
