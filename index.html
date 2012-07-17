@@ -18,20 +18,23 @@
   <body>
 
     <header>
+    <div id="directions">
       <div id="logo">
-        <img src="/routeview_logo_large.png" id="logo_large" />
-        <img src="/routeview_logo.png" id="logo_small" />
+        <img src="routeview_logo.png" id="logo_large" />
+        <img src="routeview_logo.png" id="logo_small" />
       </div>
-      <div id="directions">
-        <img id="favorited" src="/star.png" />
+        <!-- <img id="favorited" src="/star.png" /> -->
+        <div class="startend">Start Address</div>
         <input type="text" id="start" value="" placeholder="Start Address" />
+        <div class="startend">End Address</div>
         <input type="text" id="end" value="" placeholder="End Address"/>
+        </div>
 
 
-        <div class="examples">For example try: <a href="#" id="exampleroute">Honolulu, HI to Hawaii-Kai, HI</a></div>
+        <!-- <div class="examples">For example try: <a href="#" id="exampleroute">Honolulu, HI to Hawaii-Kai, HI</a></div>
         <div class="btn" id="getdirections">Get&nbsp;Directions</div>
         <div class="btn" id="showfavs">Favorites</div>
-      </div>
+      </div> -->
     </header>
     <header class="slim">
       <div class="btn" id="change">Change</div>
@@ -46,7 +49,7 @@
     <div id="menu">
       <div id="summary" class="segment"></div>
       <div id="cameras">
-        <h3>Cameras along Route</h3>
+        <div class="camerasheader">Traffic Cameras along your Route</div>
         <p>Enter a start and end point to get started</p>
       </div>
     </div>
