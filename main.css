@@ -1,19 +1,19 @@
 body{ 
   font-family:arial;
+  margin: 0;
 }
 h3{ 
   margin:10px;
   color:#333;
 }
 header{ 
-  height:65px;
   position:absolute;
   top:0px;
   left:0px;
   right:0px;
   background:#fff;
   border-bottom:solid 1px #999;
-  padding:15px;
+  padding:0;
   z-index:1000;
   font-size:16px;
   min-width:1200px;
@@ -21,25 +21,44 @@ header{
 header input{ 
   width:250px;
   padding:8px;
-  font-size:16px
-  margin:10px;
-  margin-right:15px;
+  font-size: 11px;
+  margin: 0 0 10px 0;
+  height: 8px;
+  border: 1px solid #333;
+  display: inline;
 }
 header.slim{ 
   display:none;
-  
 }
+.startend {
+	display: inline-block;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 8px;
+	line-height: 1em;
+	text-transform: uppercase;
+	width: 45px;
+	margin: 3px 0 0 6px;
+	padding-top: 4px;
+	}
 
+.camerasheader {
+	background-color: #00B73B;
+	width: 100%;
+	height: 15px;
+	font-size: 10px;
+	font-family: Arial;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 6px 0 3px 0;
+}
 .btn{ 
   cursor:pointer;
-  padding:5px 10px;
-  border-radius:5px;
-  background:#0093d0;
-  border: solid 1px #ccc;
   color:#fff;
   display:inline;
-  font-size:12px;
-  margin-right:10px;
+  font-size: 12px;
 }
 .btn.selected{ 
   background:#fff;
@@ -47,10 +66,10 @@ header.slim{
 }
 
 .btn:hover{ 
-  background:#00a3e0;
+  background:#069314;
 }
 .btn.selected:hover{
-  background:#e8e8e8;
+  background:#069314;
 } 
 header .btn{
   margin-top:-10px;
@@ -58,8 +77,8 @@ header .btn{
 header.slim .btn{ 
   margin-top:0px;
 }
-#logo_large{ 
-  display:block;
+#logo_large{
+  margin: 0 5px 0 0;
 }
 #logo_small{
   display:none;
@@ -68,23 +87,30 @@ header.slim .btn{
 #summary{ 
   display:none;
 }
-#directions{ 
-  margin-left:20px;
-  margin-top:-20px;
-  padding:5px 20px 5px 20px;
-  border:solid 1px #ccc;
-  border-radius:5px;
-  background:#eee;
+#directions{  
+  background-color: #eee;
+  width: 100%;
+  height: 36px;
 }
 #getdirections{ 
-  float:right;
+  margin: 0 0 0 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 6px;
+  background: #40B418;
 }
 #showfavs{ 
-  float:right;
+  float: left;
+  position: absolute;
+  left: 149px;
+  top: 52px;
 }
 div#map{ 
   position:absolute;
-  top:95px;
+  top:36px;
   left:0px;
   bottom:0px;
   right:325px;
@@ -93,25 +119,25 @@ div#menu{
   width:325px;
   position:absolute;
   right:0px;
-  top:95px;
-  z-index:105;
+  top:0px;
+  z-index:10001;
   bottom:0px;
   overflow:auto;
-  background:#fff;
-  border-left:solid 1px #999;
+  background:#ddd;
 }
 div#cameras{ 
   width:325px;
   margin:auto;
 }
 div.cameradesc{ 
-  float:left;
-  position:relative;
-  margin-top:-70px;
-  padding:15px;
-  color:#333;
-  background:rgba(255,255,255,0.9);
-  font-size:16px;
+  float: left;
+  position: relative;
+  margin: -70px 0 0 10px;
+  padding: 15px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: bold;
 }
 div#navbar{ 
   display:none;
@@ -144,9 +170,7 @@ div#nameroute{
 div#nameroute input{ 
   width:250px;
   padding:8px;
-  font-size:16px
-  margin:20px;
-  margin-bottom:30px;
+  font-size:16px;
   
 }
 div#routefavs{ 
@@ -185,10 +209,13 @@ div.close{
   color:#666;
   cursor:pointer;
 }
-img#favorited{ 
-  position:relative;
-  top:8px;
+div#favorited{ 
+  float: left;
+  position: absolute;
+  left: 267px;
+  top: 52px;
   cursor:pointer;
+
 }
 
 div.examples{
@@ -208,6 +235,7 @@ div#directions{
 }
 div#logo{ 
   float:left;
+  margin: 0;
 }
 div#menu p{ 
   text-align:center;
