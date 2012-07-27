@@ -1,33 +1,37 @@
 div#getdirections{ 
-  float:right;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 8px;
+  background: #40B418;
 }
 header{ 
-  height:220px;
-  display:none;
+  height:135px;
 }
 header input{ 
   width:70%;
   margin-bottom:10px;
 }
-header.slim{ 
-  height:28px;
-  position:absolute;
+header.slim{  
+  position: absolute; 
+  height: 36px;
   top:0px;
   left:0px;
   right:0px;
-  padding:7px;
-  display:block;
-  background:#fff;
+  background:#04B518;
   color:#fff;
   font-size:12px;
+  display: none;
 }
 #logo_large{ 
   display:none;
 }
 #logo_small{
-  display:block;
+  margin: 0;
+  display: block;
 } 
-
 div.dialog{ 
   position:absolute;
   margin:0px;
@@ -73,34 +77,65 @@ div#navbar{
   left:0px;
   right:0px;
   height:30px;
-  background:#333;
+  background:#069314;
   padding-top:15px;
 }
-
 div#navbar .btn{ 
-
   font-size:16px;
   color:#fff;
   border:none;
-  background:#222;
+  background:#04B518;
   border-radius:0px;
   padding:15px 40px;
   margin-right:0px;
   margin:auto;
 }
 div#navbar .btn.selected{ 
-  background:#555;
+  background:#DDDDDD;
+  color: #444;
 }
 
 div#directions{ 
-  margin-top:20px;
+  background: #04B518;
 }
 div.examples{ 
   margin-bottom:20px;
 }
 input#end{ 
-  margin-left:35px;
+  margin-left:25px;
+}
+input#start{
+	margin-top: 15px;
+	margin-left: 25px;
 }
 #showfavs{ 
   float:right;
+  top: 149px;
+  left: 16px;
+  position: absolute;
+}
+#change{
+  background: #069314;
+  padding: 5px;
+  margin: 6px 10px 0 0;
+  color: #fff;
+}
+#change:hover{
+  background: #fff;
+  color: #069314;
+}
+.startend{
+  display: none;
+}
+div#favorited {
+  position: absolute;
+  left: 267px;
+  top: 16px;
+  cursor: pointer;
+}
+div#showfavs {
+  position: absolute;
+  left: 147px;
+  top: 16px;
+  cursor: pointer;
 }

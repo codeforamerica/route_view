@@ -1,10 +1,23 @@
 body{ 
-  font-family:arial;
+  font-family:arial, sans-serif;
   margin: 0;
 }
 h3{ 
   margin:10px;
   color:#333;
+}
+
+h2{
+  display: inline;
+  margin: 0;
+}
+label{
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 2em;
+  text-transform: uppercase;
+  color: #444;
 }
 header{ 
   position:absolute;
@@ -54,6 +67,21 @@ header.slim{
 	text-align: center;
 	padding: 6px 0 3px 0;
 }
+.modal_header{
+  background-color: #00B73B;
+  height: 21px;
+  font-size: 12px;
+  font-family: Arial;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 8px 7px 8px;
+  margin: -7px -7px 10px -7px;
+}
+#nofavorites{
+  font-size: 14px;
+  color: #444;
+}
 .btn{ 
   cursor:pointer;
   color:#fff;
@@ -101,6 +129,23 @@ header.slim .btn{
   font-size: 10px;
   padding: 6px;
   background: #40B418;
+}
+#getdirections:hover{
+  background: #069314
+}
+#cancel{
+  background: #40B418;
+  padding: 5px;
+}
+#cancel:hover{
+	background: #069314
+}
+#saveRoute{
+  background: #40B418;
+  padding: 5px;
+}
+#saveRoute:hover{
+  background: #069314
 }
 #showfavs{ 
   float: left;
@@ -155,23 +200,27 @@ div#container{
 
 div.dialog{ 
   width:300px;
-  margin:100px auto 0px auto;
-  border:solid 1px #eee;
+  margin: 70px 0 0 149px;
+  border:solid 1px #c2c2c2;
   background:#fff;
-  height:400px;
   overflow:auto;
-  padding:15px;
-
+  padding:15px 15px 25px 15px;
 }
 
 div#nameroute{ 
   display:none;
 }
-div#nameroute input{ 
-  width:250px;
-  padding:8px;
-  font-size:16px;
-  
+div#nameroute input {
+  width: 250px;
+  padding: 8px;
+  font-size: 11px;
+  margin: 0 0 10px 0;
+  height: 8px;
+  border: 1px solid #333;
+  display: inline;
+  padding: 8px;
+  font-size: 12px;
+  color: #C2C2C2;
 }
 div#routefavs{ 
   display:none;
@@ -201,13 +250,21 @@ div#routefavs ul li span.name{
 div#routefavs ul li div.remove{
   float:right;
   cursor:pointer;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 2em;
+  text-transform: uppercase;
+  color: #444;
   
 }
 div.close{ 
-  float:right;
-  font-size:22px;
-  color:#666;
-  cursor:pointer;
+  float: right;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  text-transform: lowercase;
+  margin: -1px 5px 0 0;
 }
 div#favorited{ 
   float: left;
