@@ -9,7 +9,6 @@ div#getdirections{
 }
 header{ 
   height:135px;
-  display:none;
 }
 header input{ 
   width:70%;
@@ -24,7 +23,7 @@ header.slim{
   background:#04B518;
   color:#fff;
   font-size:12px;
-  display: block;
+  display: none;
 }
 #logo_large{ 
   display:none;
