@@ -57,25 +57,29 @@
     </div>
     <div id="container">
       <div id="routefavs" class="dialog">
+        <div class="modal_header">
         <div class="close">X</div>
         <h2>Favorite Routes</h2>
+        </div>
         <ul>
           <li id="route-1" class="favroute">
-            <div class="remove">[X]</div>
+            <div class="remove">[DELETE]</div>
             <span class="name">Going Home</span><br />
             <span class="start"></span> - <span class="end"></span>
           </li>
         </ul>
         <div id="nofavorites">
-          You havent added any favorites yet. <br /><br />Add a route to your favorites by clicking on the star next to start address.
+          You haven't added any favorites yet. <br /><br />Add a route to your favorites by clicking on the 'Save this Route' button.
         </div>
         
       </div>
       <div id="nameroute" class="dialog">
+        <div class="modal_header">
         <div class="close">X</div>
-        <h2>Name this route</h2>
-        <label>Name</label>
-        <input type="text" id="routename" />
+        <h2>Save Route to Favorites</h2>
+        </div>
+        <label>Route Name</label>
+        <input type="text" id="routename" value placeholder="What would you like to name this route?"/>
         <br />
         <div class="btn" id="cancel">Cancel</div>
         <div class="btn" id="saveRoute">Save</div>
