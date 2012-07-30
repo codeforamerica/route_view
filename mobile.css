@@ -11,7 +11,7 @@ header{
   height:135px;
 }
 header input{ 
-  width:70%;
+  width:60%;
   margin-bottom:10px;
 }
 header.slim{  
@@ -29,7 +29,9 @@ header.slim{
   display:none;
 }
 #logo_small{
-  margin: 0;
+  margin: 8px 0 0 0;
+  width: 80px;
+  height: 19px;
   display: block;
 } 
 div.dialog{ 
@@ -40,7 +42,7 @@ div.dialog{
   right:0px;
   bottom:0px;
   height:inherit;
-  width:inherit
+  width:inherit;
 }
 header{ 
   min-width:inherit;
@@ -102,11 +104,11 @@ div.examples{
   margin-bottom:20px;
 }
 input#end{ 
-  margin-left:25px;
+  margin-left:15px;
 }
 input#start{
-	margin-top: 15px;
-	margin-left: 25px;
+	margin-top: 51px;
+	margin-left: -65px;
 }
 #showfavs{ 
   float:right;
@@ -129,13 +131,13 @@ input#start{
 }
 div#favorited {
   position: absolute;
-  left: 267px;
-  top: 16px;
+  left: 198px;
+  top: 15px;
   cursor: pointer;
 }
 div#showfavs {
   position: absolute;
-  left: 147px;
-  top: 16px;
+  left: 79px;
+  top: 15px;
   cursor: pointer;
 }
