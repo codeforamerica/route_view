@@ -11,25 +11,25 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry,places&sensor=true"></script>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css" media="all and (max-width: 600px)" />
-    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/mobile.css" media="all and (max-width:1000px)" />
+    <script type="text/javascript" src="/static/js/main.js"></script>
   </head>
   <body>
 
     <header>
     <div id="directions">
       <div id="logo">
-        <img src="routeview_logo.png" id="logo_large" />
-        <img src="routeview_logo.png" id="logo_small" />
+        <img src="/static/img/routeview_logo.png" id="logo_large" />
+        <img src="/static/img/routeview_logo.png" id="logo_small" />
       </div>
-        <div class="btn" id="favorited" ><img src="save.png" /></div>
+        <div class="btn" id="favorited" ><img src="/static/img/save.png" /></div>
         <div class="startend">Start Address</div>
         <input type="text" id="start" value="" placeholder="Start Address" />
         <div class="startend">End Address</div>
         <input type="text" id="end" value="" placeholder="End Address"/>
         <div class="btn" id="getdirections">GO</div>
-        <div class="btn" id="showfavs"><img src="favorites.png" /></div>
+        <div class="btn" id="showfavs"><img src="/static/img/favorites.png" /></div>
         </div>
 
 
@@ -40,7 +40,7 @@
     </header>
     <header class="slim">
       <div class="btn" id="change">Get Directions</div>
-      <img src="routeview_logo.png" id="logo_small" />
+      <img src="/static/img/routeview_logo.png" id="logo_small" />
     </header>
     
     

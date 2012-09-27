@@ -2,47 +2,20 @@ var request = require("request");
 var express = require("express");
 var app = express.createServer();
 var fs = require("fs");
-//var geonode = require("geonode");
 
 app.use(express.bodyParser());
-//app.use(express.logger({ format: ':method :url' }));
-
 
 //load cameras
-var camfile = fs.readFileSync("cameras.json");
+var camfile = fs.readFileSync("data/cameras.json");
 var cameras = JSON.parse(camfile);
 
 
-/*for(c in cameras){
-    var cam = cameras[c];
-    cam.point = new geonode.Geometry("POINT("+cam.geometry.coordinates[0]+" "+cam.geometry.coordinates[1]+")");
-    cam.point.srid = 4326;
-}*/
-
-/*var myPoint = new geonode.Geometry("POINT(10 30)");
-console.log(myPoint.toWkt()); // "POINT (1.0000000000000000 2.0000000000000000)"
-
-var myPolygon = new geonode.Geometry("POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))");
-console.log(myPolygon.contains(myPoint)); // "true"
-
-var myLine = new geonode.Geometry("LINESTRING (30 10, 10 30, 40 40)");
-
-console.log(myLine.buffer(5).toWkt());
-
-console.log(myLine.buffer(5).contains(myPoint));
-*/
-
-
+// This is a server side implementation of the search for cameras along a route.
+// Currently Route View does this client side
 app.all('/api/cameras', function(req, resp){
     
     var wktline = null;
     wktline = geoJSONToWKT(req.param("route"));
-
-    try{
-    
-    }catch(e){
-        resp.send({error:"bad input"}, 401);
-    }
     
     if(wktline){
         var routeLine = new geonode.Geometry(wktline);
@@ -66,8 +39,6 @@ app.all('/api/cameras', function(req, resp){
                 console.log(e);
             }
         }
-        console.log(alongRoute);
-        //resp.send({a:"a"})
         resp.send({cameras:alongRoute});
     }
 });
@@ -85,15 +56,13 @@ var geoJSONToWKT = function(geojson){
 }
 
 
-
+// This proxy the request to a camera in order to add the referer it expects
 app.all('/camera', function(req, resp){
+
     var url = "http://goakamai.org/"+req.param("url", "");
-
     req.headers.referer = "http://goakamai.org/Home.aspx";
-
     var x = request(url)
-    req.pipe(x)
-    
+    req.pipe(x)    
     x.pipe(resp)
 });
 

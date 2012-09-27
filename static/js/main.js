@@ -32,17 +32,15 @@ $(function(){
 
 
 
-    cameraMarkerImage = new google.maps.MarkerImage('/map_pin.png',
+    cameraMarkerImage = new google.maps.MarkerImage('/static/img/map_pin.png',
                                                        new google.maps.Size(30.0, 44.0),
                                                        new google.maps.Point(0, 0),
-                                                       new google.maps.Point(15.0, 44.0)
-                                                      );
-    cameraMarkerImageSelected = new google.maps.MarkerImage('/map_pin_selected.png',
+                                                       new google.maps.Point(15.0, 44.0));
+
+    cameraMarkerImageSelected = new google.maps.MarkerImage('/static/img/map_pin_selected.png',
                                                        new google.maps.Size(36.0, 50.0),
                                                        new google.maps.Point(0, 0),
-                                                       new google.maps.Point(18.0, 50.0)
-                                                      );
-
+                                                       new google.maps.Point(18.0, 50.0));
 
     google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
         renderCamerasAlongRoute(directionsDisplay.directions)
@@ -57,7 +55,7 @@ $(function(){
         var end = $("#end").val();
         $("header.slim span.from").text(start);
         $("header.slim span.to").text(end);
-        $("#favorited").attr("src", "/star.png");
+        $("#favorited").attr("src", "/static/img/star.png");
         var request = {
             origin:start,
             destination:end,
@@ -106,7 +104,7 @@ $(function(){
 //        
     });
     $("#saveRoute").click(function(){
-        $("#favorited").attr("src", "/star_active.png");
+        $("#favorited").attr("src", "/static/img/star_active.png");
         
         saveFavoriteRoute($("#start").val(),
                           $("#end").val(),
@@ -160,7 +158,7 @@ function renderCamerasAlongRoute(result){
 
     var polyline = new google.maps.Polyline({path:result.routes[0].overview_path});
 
-    $.ajax("/cameras.json", {success:function(data){
+    $.ajax("/data/cameras.json", {success:function(data){
         var cameras = filterCameras(data, polyline);
 
         $("#cameras").empty();
@@ -186,12 +184,10 @@ function renderCamerasAlongRoute(result){
             addCamera(cameraOrder[c]);
         }        
     }}, "json");
-
 }
 
 
 function addCamera(cam){
-
     var cam_desc = "<div class='cameradesc'>"+cam.description+"</div>";
     $("#cameras").append("<img id='camera-"+cam.id+
                          "' src='/camera?url="+encodeURIComponent(cam.cameraImageURL)+"&time="+

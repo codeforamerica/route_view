@@ -36,7 +36,6 @@ header input{
   padding:8px;
   font-size: 11px;
   margin: 0 0 10px 0;
-  height: 8px;
   border: 1px solid #333;
   display: inline;
 }
@@ -169,6 +168,7 @@ div#menu{
   bottom:0px;
   overflow:auto;
   background:#ddd;
+  border-left:solid 3px #fff;
 }
 div#cameras{ 
   width:325px;
